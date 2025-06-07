@@ -1,9 +1,9 @@
 {
-  "id": "my-feature (DON'T include `obsidian-` prefix)",
-  "name": "My Feature (Change id, name, and description!)",
+  "id": "litecite",
+  "name": "LiteCite",
   "version": "1.0.0",
   "minAppVersion": "1.7.2",
-  "description": "Obsidian plugin template powered with Deno",
+  "description": "A lightweight Obsidian plugin that creates citation notes from a BibTeX / BibLaTeX file",
   "author": "<Your Name>",
   "authorUrl": "<Your Homepage URL>",
   "fundingUrl": "<Your Funding URL>",

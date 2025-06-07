@@ -8,18 +8,16 @@ import {
   Setting,
 } from "obsidian";
 
-// TODO: Remember to rename these classes and interfaces!
-
-interface MyFeaturePluginSettings {
+interface LiteCitePluginSettings {
   mySetting: string;
 }
 
-const DEFAULT_SETTINGS: MyFeaturePluginSettings = {
+const DEFAULT_SETTINGS: LiteCitePluginSettings = {
   mySetting: "default",
 };
 
-export default class MyFeaturePlugin extends Plugin {
-  settings: MyFeaturePluginSettings = DEFAULT_SETTINGS;
+export default class LiteCitePlugin extends Plugin {
+  settings: LiteCitePluginSettings = DEFAULT_SETTINGS;
 
   override async onload() {
     await this.loadSettings();
@@ -80,7 +78,7 @@ export default class MyFeaturePlugin extends Plugin {
     });
 
     // This adds a settings tab so the user can configure various aspects of the plugin
-    this.addSettingTab(new MyFeatureSettingTab(this.app, this));
+    this.addSettingTab(new LiteCiteSettingTab(this.app, this));
 
     // If the plugin hooks up any global DOM events (on parts of the app that doesn't belong to this plugin)
     // Using this function will automatically remove the event listener when this plugin is disabled.
@@ -122,10 +120,10 @@ class SampleModal extends Modal {
   }
 }
 
-class MyFeatureSettingTab extends PluginSettingTab {
-  plugin: MyFeaturePlugin;
+class LiteCiteSettingTab extends PluginSettingTab {
+  plugin: LiteCitePlugin;
 
-  constructor(app: App, plugin: MyFeaturePlugin) {
+  constructor(app: App, plugin: LiteCitePlugin) {
     super(app, plugin);
     this.plugin = plugin;
   }
