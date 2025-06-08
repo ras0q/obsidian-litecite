@@ -9,7 +9,7 @@
     "jsr:@deno/emit@0.46": "0.46.0",
     "jsr:@deno/graph@~0.73.1": "0.73.1",
     "jsr:@ras0q/esbuild-plugin-jsr@0.1.4": "0.1.4",
-    "jsr:@ras0q/regex-bibtex-parser@0.1.5": "0.1.5",
+    "jsr:@ras0q/regex-bibtex-parser@0.1.6": "0.1.6",
     "jsr:@std/assert@0.223": "0.223.0",
     "jsr:@std/bytes@0.223": "0.223.0",
     "jsr:@std/bytes@^1.0.5": "1.0.6",
@@ -83,8 +83,8 @@
         "npm:esbuild@~0.25.5"
       ]
     },
-    "@ras0q/regex-bibtex-parser@0.1.5": {
-      "integrity": "90b946318fab2047b0f2df81b09a2bc78908df11323effb8f87d0111c9773853",
+    "@ras0q/regex-bibtex-parser@0.1.6": {
+      "integrity": "012630e4cfed5154107ad016d8a0a1d1faa3659549760bd005bdd74e30d9d830",
       "dependencies": [
         "jsr:@std/streams"
       ]
@@ -365,7 +365,7 @@
     "dependencies": [
       "jsr:@david/dax@0.43.2",
       "jsr:@ras0q/esbuild-plugin-jsr@0.1.4",
-      "jsr:@ras0q/regex-bibtex-parser@0.1.5",
+      "jsr:@ras0q/regex-bibtex-parser@0.1.6",
       "npm:esbuild@0.25.5",
       "npm:eta@3.5.0",
       "npm:obsidian@1.8.7"
