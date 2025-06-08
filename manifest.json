@@ -1,7 +1,7 @@
 {
   "id": "litecite",
   "name": "LiteCite",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "minAppVersion": "1.7.2",
   "description": "A lightweight Obsidian plugin that creates citation notes from a BibTeX / BibLaTeX file",
   "author": "<Your Name>",
