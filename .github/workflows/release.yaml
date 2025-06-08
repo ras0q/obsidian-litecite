@@ -23,6 +23,6 @@ jobs:
           gh release create "$tag" \
             --prerelease \
             --generate-notes \
-            main.js manifest.json
+            ./dist/main.js ./dist/manifest.json
         env:
           GITHUB_TOKEN: ${{ github.token }}
