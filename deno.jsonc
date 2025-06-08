@@ -11,8 +11,11 @@
   ],
   "imports": {
     "@david/dax": "jsr:@david/dax@^0.43.0",
+    "@ras0q/esbuild-plugin-jsr": "jsr:@ras0q/esbuild-plugin-jsr@0.1.4",
+    "@ras0q/regex-bibtex-parser": "jsr:@ras0q/regex-bibtex-parser@^0.1.4",
     "builtin-modules": "npm:builtin-modules@^5.0.0",
-    "esbuild": "npm:esbuild@0.24.0",
+    "esbuild": "npm:esbuild@0.25.5",
+    "eta": "npm:eta@^3.5.0",
     "obsidian": "npm:obsidian@1.7.2"
   },
   "nodeModulesDir": "auto",

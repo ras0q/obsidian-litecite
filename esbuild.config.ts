@@ -1,6 +1,7 @@
 import builtinModules from "builtin-modules";
 import esbuild from "esbuild";
 import $ from "@david/dax";
+import { esbuildJsrPlugin } from "@ras0q/esbuild-plugin-jsr";
 
 const prod = Deno.args[0] === "production";
 
@@ -9,7 +10,7 @@ const pluginName = rootDir.basename().replace(/^obsidian-?/, "");
 const vaultDir = rootDir.join(`vault-for-${pluginName}`);
 if (!vaultDir.existsSync()) {
   await $`git clone --depth 1 https://github.com/kepano/kepano-obsidian.git ${vaultDir}`;
-  await $`echo ${vaultDir.basename()} >> .gitignore`;
+  await $`rm -rf ${vaultDir}/.git`;
 }
 
 const distDir = prod
@@ -53,6 +54,7 @@ const context = await esbuild.context({
         });
       },
     },
+    esbuildJsrPlugin(),
   ],
 });
 
