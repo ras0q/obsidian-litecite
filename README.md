@@ -1,27 +1,18 @@
-# Obsidian Plugin Template (with Deno)
+# Obsidian LiteCite
 
-This is a sample plugin for [Obsidian].
+A lightweight Obsidian plugin that creates citation notes from a BibTeX / BibLaTeX file.
 
-You can use [Deno] for almost everything in development!
+While this plugin might seem like a "re-invention of the wheel" for the [Citations] plugin, the it is no longer actively maintained. I've developed this new plugin to be **lighter, simpler, and faster**.
 
-- Runtime: **Deno**
-- Formatter: **Deno**
-- Linter: **Deno**
-- Type Checker: **Deno**
-- Bundler: **esbuild** (`deno bundle` is now deprecated 😅)
+It leverages **Eta** as its templating engine and uses a **custom-built parser** for BibTeX entries.
 
-See [obsidianmd/obsidian-sample-plugin] for details.
+This plugin is based on the [ras0q/obsidian-plugin-deno-template] template.
 
-## Setup
+## Usage
 
-**To simplify the explanation, we assume the plugin name is `my-feature`.**
-
-1. Create a new repository `<yourname>/obsidian-my-feature` from this template
-2. Clone the repository
-3. Rename variables in `manifest.json` and `main.ts`
-   - `id` should be `my-feature` (DON'T include `obsidian-` prefix)
-   - `name` should be `My Feature`
-   - The plugin class name should be `MyFeaturePlugin`
+1. Install and enable the plugin
+2. Open the plugin settings and set the path to your BibTeX file
+3. Use the command `LiteCite: Create note from BibTeX` to create a new note from a BibTeX entry
 
 ## Development
 
@@ -55,7 +46,9 @@ VSCode
   },
   "[yaml]": {
     "editor.defaultFormatter": "denoland.vscode-deno"
-  }
+  },
+  "deno.enable": true,
+  "deno.lint": true,
 }
 ```
 
@@ -67,7 +60,7 @@ VSCode
 3. Commit and push the changes to GitHub
 4. Run `gh release create ./dist/main.js ./dist/manifest.json ./dist/styles.css`
 
-[Obsidian]: https://obsidian.md
+[Citations]: https://github.com/hans/obsidian-citation-plugin
+[ras0q/obsidian-plugin-deno-template]: https://github.com/ras0q/obsidian-plugin-deno-template
 [Deno]: https://deno.com
-[obsidianmd/obsidian-sample-plugin]: https://github.com/obsidianmd/obsidian-sample-plugin
 [sample vault]: https://github.com/kepano/kepano-obsidian
