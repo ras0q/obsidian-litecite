@@ -21,7 +21,7 @@ jobs:
       - run: |
           tag="${GITHUB_REF#refs/tags/}"
           gh release create "$tag" \
-            --pre-release \
+            --prerelease \
             --generate-notes \
             main.js manifest.json
         env:
