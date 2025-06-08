@@ -1,10 +1,14 @@
 # Obsidian LiteCite
 
-A lightweight Obsidian plugin that creates citation notes from a BibTeX / BibLaTeX file.
+A lightweight Obsidian plugin that creates citation notes from a BibTeX /
+BibLaTeX file.
 
-While this plugin might seem like a "re-invention of the wheel" for the [Citations] plugin, the it is no longer actively maintained. I've developed this new plugin to be **lighter, simpler, and faster**.
+While this plugin might seem like a "re-invention of the wheel" for the
+[Citations] plugin, it is no longer actively maintained. I've developed this new
+plugin to be **lighter, simpler, and faster**.
 
-It leverages **Eta** as its templating engine and uses a **custom-built parser** for BibTeX entries.
+It leverages **Eta** as its templating engine and uses a **custom-built parser**
+for BibTeX entries.
 
 This plugin is based on the [ras0q/obsidian-plugin-deno-template] template.
 
@@ -12,7 +16,8 @@ This plugin is based on the [ras0q/obsidian-plugin-deno-template] template.
 
 1. Install and enable the plugin
 2. Open the plugin settings and set the path to your BibTeX file
-3. Use the command `LiteCite: Create note from BibTeX` to create a new note from a BibTeX entry
+3. Use the command `LiteCite: Create note from BibTeX` to create a new note from
+   a BibTeX entry
 
 ## Development
 

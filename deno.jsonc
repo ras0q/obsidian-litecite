@@ -22,8 +22,5 @@
   "tasks": {
     "build": "deno -A ./esbuild.config.ts production",
     "dev": "deno -A ./esbuild.config.ts"
-  },
-  "fmt": {
-    "lineWidth": 500
   }
 }
