@@ -63,7 +63,8 @@ VSCode
 2. Run `deno task build`, which will:
    - Build the plugin to `./dist`
 3. Commit and push the changes to GitHub
-4. Run `gh release create ./dist/main.js ./dist/manifest.json ./dist/styles.css`
+4. Run
+   `gh release create {{version}} ./dist/main.js ./dist/manifest.json ./dist/styles.css --generate-notes --draft --fail-on-no-commits`
 
 [Citations]: https://github.com/hans/obsidian-citation-plugin
 [ras0q/obsidian-plugin-deno-template]: https://github.com/ras0q/obsidian-plugin-deno-template
