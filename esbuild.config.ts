@@ -1,4 +1,3 @@
-import builtinModules from "builtin-modules";
 import esbuild from "esbuild";
 import $ from "@david/dax";
 import { esbuildJsrPlugin } from "@ras0q/esbuild-plugin-jsr";
@@ -37,7 +36,6 @@ const context = await esbuild.context({
     "@lezer/common",
     "@lezer/highlight",
     "@lezer/lr",
-    ...builtinModules,
   ],
   format: "cjs",
   target: "es2018",
