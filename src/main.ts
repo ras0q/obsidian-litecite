@@ -18,8 +18,8 @@ export default class LiteCitePlugin extends Plugin {
     this.bibtexManager = bibtexManager;
 
     this.addCommand({
-      id: "create-note-from-bibtex",
-      name: "Create note from BibTeX",
+      id: "open-note-from-bibtex",
+      name: "Open note from BibTeX",
       callback: async () => {
         try {
           const entries = await bibtexManager.parseBibtexEntries();

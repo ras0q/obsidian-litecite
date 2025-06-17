@@ -44,8 +44,7 @@ export class BibtexEntryFuzzyModal extends FuzzySuggestModal<BibtexEntry> {
 
   async createNoteFromEntry(entry: BibtexEntry): Promise<void> {
     try {
-      const newFile = await this.bibtexManager.createNoteFromEntry(entry);
-      new Notice(`Created citation note: ${entry.citeKey}`);
+      const newFile = await this.bibtexManager.ensureNoteExists(entry);
       const leaf = this.app.workspace.getLeaf();
       leaf.openFile(newFile);
     } catch (error: unknown) {

@@ -69,11 +69,12 @@ export class BibtexManager {
     return parseBibtex(content);
   }
 
-  async createNoteFromEntry(entry: BibtexEntry): Promise<TFile> {
-    const folder = this.settings.noteFolder || "References";
+  async ensureNoteExists(entry: BibtexEntry): Promise<TFile> {
+    const folderPath = this.settings.noteFolder || "References";
 
-    if (!this.pathExists(folder)) {
-      await this.app.vault.createFolder(folder);
+    const folder = this.app.vault.getFolderByPath(normalizePath(folderPath));
+    if (folder === null) {
+      await this.app.vault.createFolder(folderPath);
     }
 
     const fileName = this.renderTemplate(
@@ -81,21 +82,17 @@ export class BibtexManager {
       entry,
       true,
     ) + ".md";
-    const filePath = normalizePath(`${folder}/${fileName}`);
+    const filePath = normalizePath(`${folderPath}/${fileName}`);
 
-    if (this.pathExists(filePath)) {
-      throw new Error(`File already exists: ${filePath}, remove it first.`);
+    const file = this.app.vault.getFileByPath(normalizePath(filePath));
+    if (file !== null) {
+      return file;
     }
 
     const templateContent = await this.loadTemplateContent();
     const noteContent = this.renderTemplate(templateContent, entry);
 
     return await this.app.vault.create(filePath, noteContent);
-  }
-
-  private pathExists(path: string): boolean {
-    const file = this.app.vault.getAbstractFileByPath(normalizePath(path));
-    return file !== null;
   }
 
   private renderTemplate(
