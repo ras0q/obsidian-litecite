@@ -3,7 +3,7 @@
   "name": "LiteCite",
   "version": "1.0.6",
   "minAppVersion": "1.7.2",
-  "description": "A lightweight Obsidian plugin that creates citation notes from a BibTeX / BibLaTeX file",
+  "description": "Creates citation notes from a BibTeX / BibLaTeX file",
   "author": "ras0q",
   "authorUrl": "https://github.com/ras0q",
   "fundingUrl": "https://github.com/sponsors/ras0q",

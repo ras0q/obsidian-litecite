@@ -1,4 +1,4 @@
-# Obsidian LiteCite
+# LiteCite
 
 A lightweight Obsidian plugin that creates citation notes from a BibTeX /
 BibLaTeX file.
