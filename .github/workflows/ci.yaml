@@ -14,7 +14,6 @@ jobs:
       - uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
-      - run: deno install
       - run: deno task build
 
   check:
@@ -24,6 +23,4 @@ jobs:
       - uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
-      - run: deno check .
-      - run: deno fmt --check .
-      - run: deno lint .
+      - run: deno task check

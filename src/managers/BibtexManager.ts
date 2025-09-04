@@ -1,6 +1,6 @@
 import { BibtexEntry, parseBibtex } from "@ras0q/regex-bibtex-parser";
 import { Eta } from "eta";
-import { App, normalizePath, TFile } from "obsidian";
+import { App, normalizePath, requestUrl, TFile } from "obsidian";
 import { LiteCitePluginSettings } from "../settings/settings.ts";
 
 const DEFAULT_TEMPLATE = `---
@@ -48,13 +48,8 @@ export class BibtexManager {
     }
 
     if (path.startsWith("http://") || path.startsWith("https://")) {
-      const response = await fetch(path);
-      if (!response.ok) {
-        throw new Error(
-          `Failed to fetch bibtex file from ${path}: ${response.statusText}`,
-        );
-      }
-      return await response.text();
+      const response = await requestUrl(path);
+      return response.text;
     }
 
     const file = this.app.vault.getAbstractFileByPath(normalizePath(path));

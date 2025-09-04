@@ -14,12 +14,16 @@
     "@ras0q/esbuild-plugin-jsr": "jsr:@ras0q/esbuild-plugin-jsr@0.1.4",
     "@ras0q/regex-bibtex-parser": "jsr:@ras0q/regex-bibtex-parser@0.1.6",
     "esbuild": "npm:esbuild@0.25.5",
+    "eslint": "npm:eslint@^9.34.0",
+    "eslint-plugin-obsidianmd": "npm:eslint-plugin-obsidianmd@^0.1.4",
     "eta": "npm:eta@3.5.0",
+    "globals": "npm:globals@^16.3.0",
     "obsidian": "npm:obsidian@1.8.7"
   },
   "nodeModulesDir": "auto",
   "tasks": {
     "build": "deno -A ./esbuild.config.ts production",
-    "dev": "deno -A ./esbuild.config.ts"
+    "dev": "deno -A ./esbuild.config.ts",
+    "check": "deno check . && deno fmt --check . && deno lint . && eslint ./src"
   }
 }
