@@ -22,7 +22,7 @@ export class LiteCiteSettingTab extends PluginSettingTab {
     });
 
     new Setting(containerEl)
-      .setName("BibTeX file path")
+      .setName("BibTeX file path or url")
       .setDesc("Path to your BibTeX file or URL to remote file")
       .addText((text) => {
         text
