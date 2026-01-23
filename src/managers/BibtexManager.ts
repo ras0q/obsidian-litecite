@@ -48,11 +48,7 @@ export class BibtexManager {
     }
 
     if (path.startsWith("http://") || path.startsWith("https://")) {
-      const cacheLimit = 60 * 1000; // 1 minute
-      const cacheBuster = Date.now() / cacheLimit;
-      const url = new URL(path);
-      url.searchParams.set("cb", cacheBuster.toString());
-      return await request(url.toString());
+      return await request(path);
     }
 
     const file = this.app.vault.getAbstractFileByPath(normalizePath(path));
