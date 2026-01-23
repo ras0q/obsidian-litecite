@@ -1,7 +1,7 @@
 {
   "id": "litecite",
   "name": "LiteCite",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "minAppVersion": "1.7.2",
   "description": "Creates citation notes from a BibTeX / BibLaTeX file",
   "author": "ras0q",
