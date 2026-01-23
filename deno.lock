@@ -32,7 +32,6 @@
     "npm:eslint-plugin-obsidianmd@~0.1.9": "0.1.9_@eslint+js@9.39.2_@eslint+json@0.14.0_eslint@9.39.2_obsidian@1.11.4__@codemirror+state@6.5.0__@codemirror+view@6.38.6_typescript-eslint@8.53.1__eslint@9.39.2__typescript@5.4.5__@typescript-eslint+parser@8.53.1___eslint@9.39.2___typescript@5.4.5_typescript@5.4.5",
     "npm:eslint@^9.39.2": "9.39.2",
     "npm:eta@4.5.0": "4.5.0",
-    "npm:globals@^17.1.0": "17.1.0",
     "npm:obsidian@1.11.4": "1.11.4_@codemirror+state@6.5.0_@codemirror+view@6.38.6"
   },
   "jsr": {
@@ -1330,9 +1329,6 @@
     "globals@15.15.0": {
       "integrity": "sha512-7ACyT3wmyp3I61S4fG682L0VA2RGD9otkqGJIwNUMF1SWUombIIk+af1unuDYgMm082aHYwD+mzJvv9Iu8dsgg=="
     },
-    "globals@17.1.0": {
-      "integrity": "sha512-8HoIcWI5fCvG5NADj4bDav+er9B9JMj2vyL2pI8D0eismKyUvPLTSs+Ln3wqhwcp306i73iyVnEKx3F6T47TGw=="
-    },
     "globalthis@1.0.4": {
       "integrity": "sha512-DpLKbNU4WylpxJykQujfCcwYWiV/Jhm50Goo0wrVILAv5jOr9d+H+UR3PhSCD2rCCEIg0uc+G+muBTwD54JhDQ==",
       "dependencies": [
@@ -2290,7 +2286,6 @@
       "npm:eslint-plugin-obsidianmd@~0.1.9",
       "npm:eslint@^9.39.2",
       "npm:eta@4.5.0",
-      "npm:globals@^17.1.0",
       "npm:obsidian@1.11.4"
     ]
   }

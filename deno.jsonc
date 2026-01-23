@@ -17,7 +17,6 @@
     "eslint": "npm:eslint@^9.39.2",
     "eslint-plugin-obsidianmd": "npm:eslint-plugin-obsidianmd@^0.1.9",
     "eta": "npm:eta@4.5.0",
-    "globals": "npm:globals@^17.1.0",
     "obsidian": "npm:obsidian@1.11.4"
   },
   "nodeModulesDir": "auto",
